@@ -6,6 +6,8 @@ To keep this README from being too long I have created separate README's. There 
 
 All of this can easily be automated with Git Actions, Jenkins or any other CI/CD setup but in the interest of time I had to work on this, I mostly set this up manually with Terraform, Helm, and CLI. Terraform has a Helm provider that can also be used instead of the Helm CLI that I used in this demo.
 
+I had also never used Azure so there was time spent researching how things work in Azure vs AWS.
+
 Here are all the resources that were created in Azure after everything was setup:
 
 ![alt text](azure.png)
