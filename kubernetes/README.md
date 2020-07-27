@@ -1,6 +1,6 @@
 # Deploy Prometheus, Grafana, Nginx-Ingress, and Nginx
 
-In this directory there are configurations for deploying our monitoring apps and our services. I chose to to also install the Nginx Ingress controller so that we could access Prometheus and Granfana as well as it already has the prometheus exporter built in. As soon as the Ingress is up, Prometheus will start scraping metrics.
+In this directory there are configurations for deploying our monitoring apps and our services. I chose to also install the Nginx Ingress controller so that we could access Prometheus and Granfana as well as it already has the prometheus exporter built in. As soon as the Ingress is up, Prometheus will start scraping metrics.
 
 ## Prometheus
 
