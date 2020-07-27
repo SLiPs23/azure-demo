@@ -60,6 +60,8 @@ Now edit your /etc/hosts file and add the following:
 - 40.122.36.120   grafana.az.com
 - 40.122.36.120   mywebapp.az.com
 
+NOTE: your IP for the Load Balancer will be different, be sure to put your LB IP and not the one I have listed here.
+
 You can update the URLs if you want, just be sure to also change them in the ingress yamls. Lets go to Grafana but first we need the admin password which we can change once we have logged in:
 
 `kubectl get secret --namespace monitoring grafana -o jsonpath="{.data.admin-password}" | base64 --decode ; echo`
@@ -72,6 +74,6 @@ You are looking for the CLUSTER-IP for prometheus-server. Enter that into the UR
 
 Now we can create a graph that shows HTTP requests. The metric we are looking for here is *nginx_ingress_nginx_http_requests_total*.
 
-Now eveytime I reload mywebapp.az.com the grafana graph goes up by 1. NOTE: this will also go up if I hit prometheus UI or grafana UI because prometheus is scrapping the ingress endpoint. Here is an image of the graph:
+Now eveytime I reload mywebapp.az.com the grafana graph goes up by 1. NOTE: this will also go up if I hit prometheus UI or grafana UI because prometheus is scrapping the ingress endpoint. There is also a Nginx exporter for Prometheus if we just wanted metrics for the Nginx webserver but it seemed redundant since we already have metrics for the ingress endpoint. Here is an image of the graph:
 
 ![alt text](grafana.png)
