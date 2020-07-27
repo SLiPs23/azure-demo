@@ -18,7 +18,7 @@ The $account-key is the same key from the command above which I grabbed from the
 
 `az ad sp create-for-rbac --name ServicePrincipalK8s`
 
-Next we are going to set a couple of Terraform variables and you can get these by looking at the output of the previous command
+Next we are going to set a couple of Terraform variables and you can get these by looking at the output of the previous command:
 
 `export TF_VAR_client_id=$appId`
 

@@ -12,7 +12,7 @@ After that I went into the stable charts directory and found Prometheus. Once in
 
 `kubectl create namespace monitoring`
 
-Now we are ready to install the prometheus chart but don't forget to also install Helm
+Now we are ready to install the prometheus chart but don't forget to also install Helm:
 
 `brew install helm`
 
@@ -46,7 +46,7 @@ We are also going to use helm to install the Ingress controller:
 
 After that is installed you will notice something if you run the following command:
 
-`kubectl get svc` (I installed the Ingress in the default namespace but it can be installed in any namespace)
+`kubectl get svc` (I installed the Ingress in the default namespace but it can be installed in any namespace.)
 
 *nginx-ingress-nginx-ingress   LoadBalancer   10.0.136.47   40.122.36.120   80:32231/TCP,443:32496/TCP   138m*
 
@@ -70,8 +70,8 @@ In your browser go to grafana.az.com and login with admin as the user and the ou
 
 You are looking for the CLUSTER-IP for prometheus-server. Enter that into the URL field in grafana and click Save and Test.
 
-Now we can create a graph that shows HTTP requests. The metric we are looking for here is *nginx_ingress_nginx_http_requests_total* 
+Now we can create a graph that shows HTTP requests. The metric we are looking for here is *nginx_ingress_nginx_http_requests_total*.
 
-Now eveytime I reload mywebapp.az.com the grafana graph goes up by 1. NOTE: this will also go up if I hit prometheus UI or grafana UI because prometheus is scrapping the ingress endpoint. Here is an image of the graph
+Now eveytime I reload mywebapp.az.com the grafana graph goes up by 1. NOTE: this will also go up if I hit prometheus UI or grafana UI because prometheus is scrapping the ingress endpoint. Here is an image of the graph:
 
 ![alt text](grafana.png)
