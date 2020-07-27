@@ -40,4 +40,4 @@ Now we wait for the cluster to be created. I used the Azure console to watch and
 
 `kubectl get nodes`
 
-That's it, we now have a running Kubernetes cluster in Azure. Head over to the kubernetes directory for deploying Prometheus, Grafana, Nginx-Ingress, and Nginx
+That's it, we now have a running Kubernetes cluster in Azure. Head over to the kubernetes directory for deploying Prometheus, Grafana, Nginx-Ingress, and Nginx.
