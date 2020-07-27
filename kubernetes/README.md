@@ -32,7 +32,7 @@ Find the grafana directory in the stable charts section and run the following to
 
 `helm install grafana . --set persistence.enabled=true --set persistence.accessModes={ReadWriteOnce} --set persistence.size=8Gi --namespace monitoring`
 
-Notice that we are using persistant storage here, we don't want to lose our graphs is the grafana pod is killed.
+Notice that we are using persistant storage here, we don't want to lose our graphs if the grafana pod is killed.
 
 ## Nginx Ingress Controller
 
