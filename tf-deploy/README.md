@@ -3,6 +3,7 @@
 To install the K8s cluster I will be using Terraform. You can use brew to install Terraform and the Azure CLI
 
 `brew install terraform`
+
 `brew install azure-cli`
 
 Before we initialize Terraform we want to create a storage container in Azure to store our state files. I used the Azure console to create a storage account name of cstfstorage. After creating the storage account I used the console to grab the account-key. Now we are ready to create the storage container.
